@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="css/summernote.css" rel="stylesheet">
+    <script type="text/javascript" src="js/summernote.js"></script>
+    <!-- // <script src="js/jquery/datetimepicker/moment.min.js" type="text/javascript"></script> -->
+    <!-- // <script src="js/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script> -->
+    <!-- <link href="js/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" /> -->
+    <link type="text/css" href="css/admin.css" rel="stylesheet" media="screen" />
+    <!-- // <script src="js/common.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+    <div id="container">
+        <header id="header" class="navbar navbar-static-top">
+            <div class="navbar-header">
+                <a type="button" id="button-menu" class="pull-left"><i class="fa fa-indent fa-lg"></i></a>
+                <a href="#common/dashboard&amp;token=7317a6d193e64aee3a635ce729516a4d" class="navbar-brand"><img src="images/logo.png" alt="OpenCart" title="OpenCart" /></a>
+            </div>
+            <ul class="nav pull-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="label label-danger pull-left">1487</span> <i class="fa fa-bell fa-lg"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
+                        <li class="dropdown-header">Orders</li>
+                        <li><a href="#sale/order&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_order_status=2" style="display: block; overflow: auto;">Pending <span class="label label-warning pull-right">0</span></a></li>
+                        <li><a href="#sale/order&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_order_status=5">Completed <span class="label label-success pull-right">0</span></a></li>
+                        <li><a href="#sale/return&amp;token=7317a6d193e64aee3a635ce729516a4d">Returns <span class="label label-danger pull-right">93</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Customers</li>
+                        <li><a href="#report/customer_online&amp;token=7317a6d193e64aee3a635ce729516a4d">Customers Online <span class="label label-success pull-right">0</span></a></li>
+                        <li><a href="#sale/customer&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_approved=0">Pending approval <span class="label label-danger pull-right">0</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Products</li>
+                        <li><a href="#catalog/product&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_quantity=0">Out of stock <span class="label label-danger pull-right">16</span></a></li>
+                        <li><a href="#catalog/review&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_status=0">Reviews <span class="label label-danger pull-right">1378</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Affiliates</li>
+                        <li><a href="#marketing/affiliate&amp;token=7317a6d193e64aee3a635ce729516a4d&amp;filter_approved=1">Pending approval <span class="label label-danger pull-right">0</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-life-ring fa-lg"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Stores <i class="fa fa-shopping-cart"></i></li>
+                        <li><a href="http://demo.opencart.com/" target="_blank">Your Store</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Help <i class="fa fa-life-ring"></i></li>
+                        <li><a href="http://www.opencart.com" target="_blank">Homepage</a></li>
+                        <li><a href="http://docs.opencart.com" target="_blank">Documentation</a></li>
+                        <li><a href="http://forum.opencart.com" target="_blank">Support Forum</a></li>
+                    </ul>
+                </li>
+                <li><a href="#common/logout&amp;token=7317a6d193e64aee3a635ce729516a4d"><span class="hidden-xs hidden-sm hidden-md">Logout</span> <i class="fa fa-sign-out fa-lg"></i></a></li>
+            </ul>
+        </header>
+        <nav id="column-left">
+            <div id="profile">
+                <div>
+                    <a class="dropdown-toggle" data-toggle="dropdown"><img src="http://demo.opencart.com/image/cache/no_image-45x45.png" alt="demo demo" title="demo" class="img-circle" /></a>
+                </div>
+                <div>
+                    <h4>demo demo</h4>
+                    <small>Demonstration</small></div>
+            </div>
+            <ul id="menu">
+                <li id="dashboard"><a href="#common/dashboard&amp;token=7317a6d193e64aee3a635ce729516a4d"><i class="fa fa-dashboard fa-fw"></i> <span>Dashboard</span></a></li>
+                <li id="catalog"><a class="parent"><i class="fa fa-tags fa-fw"></i> <span>Catalog</span></a>
+                    <ul>
+                        <li><a href="#catalog/category&amp;token=7317a6d193e64aee3a635ce729516a4d">Categories</a></li>
+                        <li><a href="#catalog/product&amp;token=7317a6d193e64aee3a635ce729516a4d">Products</a></li>
+                        <li><a href="#catalog/recurring&amp;token=7317a6d193e64aee3a635ce729516a4d">Recurring Profiles</a></li>
+                        <li><a href="#catalog/filter&amp;token=7317a6d193e64aee3a635ce729516a4d">Filters</a></li>
+                        <li><a class="parent">Attributes</a>
+                            <ul>
+                                <li><a href="#catalog/attribute&amp;token=7317a6d193e64aee3a635ce729516a4d">Attributes</a></li>
+                                <li><a href="#catalog/attribute_group&amp;token=7317a6d193e64aee3a635ce729516a4d">Attribute Groups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#catalog/option&amp;token=7317a6d193e64aee3a635ce729516a4d">Options</a></li>
+                        <li><a href="#catalog/manufacturer&amp;token=7317a6d193e64aee3a635ce729516a4d">Manufacturers</a></li>
+                        <li><a href="#catalog/download&amp;token=7317a6d193e64aee3a635ce729516a4d">Downloads</a></li>
+                        <li><a href="#catalog/review&amp;token=7317a6d193e64aee3a635ce729516a4d">Reviews</a></li>
+                        <li><a href="#catalog/information&amp;token=7317a6d193e64aee3a635ce729516a4d">Information</a></li>
+                    </ul>
+                </li>
+                <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span>Extensions</span></a>
+                    <ul>
+                        <li><a href="#extension/installer&amp;token=7317a6d193e64aee3a635ce729516a4d">Extension Installer</a></li>
+                        <li><a href="#extension/modification&amp;token=7317a6d193e64aee3a635ce729516a4d">Modifications</a></li>
+                        <li><a href="#extension/module&amp;token=7317a6d193e64aee3a635ce729516a4d">Modules</a></li>
+                        <li><a href="#extension/shipping&amp;token=7317a6d193e64aee3a635ce729516a4d">Shipping</a></li>
+                        <li><a href="#extension/payment&amp;token=7317a6d193e64aee3a635ce729516a4d">Payments</a></li>
+                        <li><a href="#extension/total&amp;token=7317a6d193e64aee3a635ce729516a4d">Order Totals</a></li>
+                        <li><a href="#extension/feed&amp;token=7317a6d193e64aee3a635ce729516a4d">Feeds</a></li>
+                    </ul>
+                </li>
+                <li id="sale"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i> <span>Sales</span></a>
+                    <ul>
+                        <li><a href="#sale/order&amp;token=7317a6d193e64aee3a635ce729516a4d">Orders</a></li>
+                        <li><a href="#sale/recurring&amp;token=7317a6d193e64aee3a635ce729516a4d">Recurring Orders</a></li>
+                        <li><a href="#sale/return&amp;token=7317a6d193e64aee3a635ce729516a4d">Returns</a></li>
+                        <li><a class="parent">Customers</a>
+                            <ul>
+                                <li><a href="#sale/customer&amp;token=7317a6d193e64aee3a635ce729516a4d">Customers</a></li>
+                                <li><a href="#sale/customer_group&amp;token=7317a6d193e64aee3a635ce729516a4d">Customer Groups</a></li>
+                                <li><a href="#sale/custom_field&amp;token=7317a6d193e64aee3a635ce729516a4d">Custom Fields</a></li>
+                                <li><a href="#sale/customer_ban_ip&amp;token=7317a6d193e64aee3a635ce729516a4d">Banned IP</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Gift Vouchers</a>
+                            <ul>
+                                <li><a href="#sale/voucher&amp;token=7317a6d193e64aee3a635ce729516a4d">Gift Vouchers</a></li>
+                                <li><a href="#sale/voucher_theme&amp;token=7317a6d193e64aee3a635ce729516a4d">Voucher Themes</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">PayPal</a>
+                            <ul>
+                                <li><a href="#payment/pp_express/search&amp;token=7317a6d193e64aee3a635ce729516a4d">Search</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="parent"><i class="fa fa-share-alt fa-fw"></i> <span>Marketing</span></a>
+                    <ul>
+                        <li><a href="#marketing/marketing&amp;token=7317a6d193e64aee3a635ce729516a4d">Marketing</a></li>
+                        <li><a href="#marketing/affiliate&amp;token=7317a6d193e64aee3a635ce729516a4d">Affiliates</a></li>
+                        <li><a href="#marketing/coupon&amp;token=7317a6d193e64aee3a635ce729516a4d">Coupons</a></li>
+                        <li><a href="#marketing/contact&amp;token=7317a6d193e64aee3a635ce729516a4d">Mail</a></li>
+                    </ul>
+                </li>
+                <li id="system"><a class="parent"><i class="fa fa-cog fa-fw"></i> <span>System</span></a>
+                    <ul>
+                        <li><a href="#setting/store&amp;token=7317a6d193e64aee3a635ce729516a4d">Settings</a></li>
+                        <li><a class="parent">Design</a>
+                            <ul>
+                                <li><a href="#design/layout&amp;token=7317a6d193e64aee3a635ce729516a4d">Layouts</a></li>
+                                <li><a href="#design/banner&amp;token=7317a6d193e64aee3a635ce729516a4d">Banners</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Users</a>
+                            <ul>
+                                <li><a href="#user/user&amp;token=7317a6d193e64aee3a635ce729516a4d">Users</a></li>
+                                <li><a href="#user/user_permission&amp;token=7317a6d193e64aee3a635ce729516a4d">User Groups</a></li>
+                                <li><a href="#user/api&amp;token=7317a6d193e64aee3a635ce729516a4d">API</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Localisation</a>
+                            <ul>
+                                <li><a href="#localisation/location&amp;token=7317a6d193e64aee3a635ce729516a4d">Store Location</a></li>
+                                <li><a href="#localisation/language&amp;token=7317a6d193e64aee3a635ce729516a4d">Languages</a></li>
+                                <li><a href="#localisation/currency&amp;token=7317a6d193e64aee3a635ce729516a4d">Currencies</a></li>
+                                <li><a href="#localisation/stock_status&amp;token=7317a6d193e64aee3a635ce729516a4d">Stock Statuses</a></li>
+                                <li><a href="#localisation/order_status&amp;token=7317a6d193e64aee3a635ce729516a4d">Order Statuses</a></li>
+                                <li><a class="parent">Returns</a>
+                                    <ul>
+                                        <li><a href="#localisation/return_status&amp;token=7317a6d193e64aee3a635ce729516a4d">Return Statuses</a></li>
+                                        <li><a href="#localisation/return_action&amp;token=7317a6d193e64aee3a635ce729516a4d">Return Actions</a></li>
+                                        <li><a href="#localisation/return_reason&amp;token=7317a6d193e64aee3a635ce729516a4d">Return Reasons</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#localisation/country&amp;token=7317a6d193e64aee3a635ce729516a4d">Countries</a></li>
+                                <li><a href="#localisation/zone&amp;token=7317a6d193e64aee3a635ce729516a4d">Zones</a></li>
+                                <li><a href="#localisation/geo_zone&amp;token=7317a6d193e64aee3a635ce729516a4d">Geo Zones</a></li>
+                                <li><a class="parent">Taxes</a>
+                                    <ul>
+                                        <li><a href="#localisation/tax_class&amp;token=7317a6d193e64aee3a635ce729516a4d">Tax Classes</a></li>
+                                        <li><a href="#localisation/tax_rate&amp;token=7317a6d193e64aee3a635ce729516a4d">Tax Rates</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#localisation/length_class&amp;token=7317a6d193e64aee3a635ce729516a4d">Length Classes</a></li>
+                                <li><a href="#localisation/weight_class&amp;token=7317a6d193e64aee3a635ce729516a4d">Weight Classes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="tools"><a class="parent"><i class="fa fa-wrench fa-fw"></i> <span>Tools</span></a>
+                    <ul>
+                        <li><a href="#tool/upload&amp;token=7317a6d193e64aee3a635ce729516a4d">Uploads</a></li>
+                        <li><a href="#tool/backup&amp;token=7317a6d193e64aee3a635ce729516a4d">Backup / Restore</a></li>
+                        <li><a href="#tool/error_log&amp;token=7317a6d193e64aee3a635ce729516a4d">Error Logs</a></li>
+                    </ul>
+                </li>
+                <li id="reports"><a class="parent"><i class="fa fa-bar-chart-o fa-fw"></i> <span>Reports</span></a>
+                    <ul>
+                        <li><a class="parent">Sales</a>
+                            <ul>
+                                <li><a href="#report/sale_order&amp;token=7317a6d193e64aee3a635ce729516a4d">Orders</a></li>
+                                <li><a href="#report/sale_tax&amp;token=7317a6d193e64aee3a635ce729516a4d">Tax</a></li>
+                                <li><a href="#report/sale_shipping&amp;token=7317a6d193e64aee3a635ce729516a4d">Shipping</a></li>
+                                <li><a href="#report/sale_return&amp;token=7317a6d193e64aee3a635ce729516a4d">Returns</a></li>
+                                <li><a href="#report/sale_coupon&amp;token=7317a6d193e64aee3a635ce729516a4d">Coupons</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Products</a>
+                            <ul>
+                                <li><a href="#report/product_viewed&amp;token=7317a6d193e64aee3a635ce729516a4d">Viewed</a></li>
+                                <li><a href="#report/product_purchased&amp;token=7317a6d193e64aee3a635ce729516a4d">Purchased</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Customers</a>
+                            <ul>
+                                <li><a href="#report/customer_online&amp;token=7317a6d193e64aee3a635ce729516a4d">Customers Online</a></li>
+                                <li><a href="#report/customer_activity&amp;token=7317a6d193e64aee3a635ce729516a4d">Customer Activity</a></li>
+                                <li><a href="#report/customer_order&amp;token=7317a6d193e64aee3a635ce729516a4d">Orders</a></li>
+                                <li><a href="#report/customer_reward&amp;token=7317a6d193e64aee3a635ce729516a4d">Reward Points</a></li>
+                                <li><a href="#report/customer_credit&amp;token=7317a6d193e64aee3a635ce729516a4d">Credit</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Marketing</a>
+                            <ul>
+                                <li><a href="#report/marketing&amp;token=7317a6d193e64aee3a635ce729516a4d">Marketing</a></li>
+                                <li><a href="#report/affiliate&amp;token=7317a6d193e64aee3a635ce729516a4d">Affiliates</a></li>
+                                <li><a href="#report/affiliate_activity&amp;token=7317a6d193e64aee3a635ce729516a4d">Affiliate Activity</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="stats">
+                <ul>
+                    <li>
+                        <div>Orders Completed <span class="pull-right">0%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"> <span class="sr-only">0%</span> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Orders Processing <span class="pull-right">0%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"> <span class="sr-only">0%</span> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Other Statuses <span class="pull-right">100%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"> <span class="sr-only">100%</span> </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content"></div>
+        <footer id="footer"><a href="http://www.opencart.com">OpenCart for NodeJS</a> &copy; 2015-2016 All Rights Reserved.
+            <br/>
+        </footer>
+    </div>
+</body>
+
+</html>

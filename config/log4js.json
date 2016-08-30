@@ -1,0 +1,34 @@
+{
+	"replaceConsole": true,
+	"appenders": [{
+		"type": "console"
+	}, {
+		"type": "logLevelFilter",
+		"level": "WARN",
+		"appender": {
+			"type": "file",
+			"filename": "logs/error.log",
+			"maxLogSize": 20480,
+			"backups": 3
+		}
+	}, {
+		"type": "logLevelFilter",
+		"level": "ALL",
+		"appender": {
+			"type": "file",
+			"filename": "logs/all.log",
+			"maxLogSize": 20480,
+			"backups": 3
+		}
+	}, {
+		"type": "file",
+		"filename": "./logs/access.log",
+		"maxLogSize": 20480,
+		"backups": 3,
+		"category": "access",
+		"format": ":remote-addr :response-time - [:date] ':method :url HTTP/:http-version' :status :content-length ':referrer' ':user-agent'"
+	}],
+	"levels": {
+		"access": "INFO"
+	}
+}

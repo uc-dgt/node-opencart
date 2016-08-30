@@ -1,0 +1,22 @@
+{
+  "name": "node-opencart",
+  "version": "0.0.1",
+  "description": "opencart built on node.",
+  "private": true,
+  "author": "Suzhou Beyond Co., Ltd.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node setup",
+    "test": "mocha test",
+    "apps": "./apps/gulp development",
+    "start": "pm2 start ./config/pm2.json"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "log4js": "^0.6.38",
+    "mongoose": "^4.5.10",
+    "underscore": "^1.8.3"
+  }
+}

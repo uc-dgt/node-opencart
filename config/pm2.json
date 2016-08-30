@@ -1,0 +1,19 @@
+{
+	"apps": [
+		{
+			"name": "ApiService",
+			"script": "./startup/apiService.js",
+			"cwd": "/Users/williambai/eclipse/webspace/node-opencart/"
+		},
+		{
+			"name": "www",
+			"script": "./startup/defaultSite.js",
+			"cwd": "/Users/williambai/eclipse/webspace/node-opencart/"
+		},
+		{
+			"name": "admin",
+			"script": "./startup/adminSite.js",
+			"cwd": "/Users/williambai/eclipse/webspace/node-opencart/"
+		}
+	]
+}

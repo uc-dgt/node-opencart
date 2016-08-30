@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <link href="assets/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/summernote.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/summernote.js"></script>
+    <!-- // <script src="assets/js/jquery/datetimepicker/moment.min.js" type="text/javascript"></script> -->
+    <!-- // <script src="assets/js/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script> -->
+    <!-- <link href="assets/js/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" /> -->
+    <link type="text/css" href="assets/css/admin.css" rel="stylesheet" media="screen" />
+    <!-- // <script src="assets/js/common.js" type="text/javascript"></script> -->
+</head>
+
+<body>
+    <div id="container">
+        <header id="header" class="navbar navbar-static-top">
+            <div class="navbar-header">
+                <a type="button" id="button-menu" class="pull-left"><i class="fa fa-indent fa-lg"></i></a>
+                <a href="#common/dashboard" class="navbar-brand"><img src="assets/images/logo.png" alt="OpenCart" title="OpenCart" /></a>
+            </div>
+            <ul class="nav pull-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="label label-danger pull-left">1487</span> <i class="fa fa-bell fa-lg"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
+                        <li class="dropdown-header">Orders</li>
+                        <li><a href="#sale/order&amp;filter_order_status=2" style="display: block; overflow: auto;">Pending <span class="label label-warning pull-right">0</span></a></li>
+                        <li><a href="#sale/order&amp;filter_order_status=5">Completed <span class="label label-success pull-right">0</span></a></li>
+                        <li><a href="#sale/return">Returns <span class="label label-danger pull-right">93</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Customers</li>
+                        <li><a href="#report/customer_online">Customers Online <span class="label label-success pull-right">0</span></a></li>
+                        <li><a href="#sale/customer&amp;filter_approved=0">Pending approval <span class="label label-danger pull-right">0</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Products</li>
+                        <li><a href="#catalog/product&amp;filter_quantity=0">Out of stock <span class="label label-danger pull-right">16</span></a></li>
+                        <li><a href="#catalog/review&amp;filter_status=0">Reviews <span class="label label-danger pull-right">1378</span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Affiliates</li>
+                        <li><a href="#marketing/affiliate&amp;filter_approved=1">Pending approval <span class="label label-danger pull-right">0</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-life-ring fa-lg"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Stores <i class="fa fa-shopping-cart"></i></li>
+                        <li><a href="http://demo.opencart.com/" target="_blank">Your Store</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Help <i class="fa fa-life-ring"></i></li>
+                        <li><a href="http://www.opencart.com" target="_blank">Homepage</a></li>
+                        <li><a href="http://docs.opencart.com" target="_blank">Documentation</a></li>
+                        <li><a href="http://forum.opencart.com" target="_blank">Support Forum</a></li>
+                    </ul>
+                </li>
+                <li><a href="#common/logout"><span class="hidden-xs hidden-sm hidden-md">Logout</span> <i class="fa fa-sign-out fa-lg"></i></a></li>
+            </ul>
+        </header>
+        <nav id="column-left">
+            <div id="profile">
+                <div>
+                    <a class="dropdown-toggle" data-toggle="dropdown"><img src="http://demo.opencart.com/image/cache/no_image-45x45.png" alt="demo demo" title="demo" class="img-circle" /></a>
+                </div>
+                <div>
+                    <h4>demo demo</h4>
+                    <small>Demonstration</small></div>
+            </div>
+            <ul id="menu">
+                <li id="dashboard"><a href="#common/dashboard"><i class="fa fa-dashboard fa-fw"></i> <span>Dashboard</span></a></li>
+                <li id="catalog"><a class="parent"><i class="fa fa-tags fa-fw"></i> <span>Catalog</span></a>
+                    <ul>
+                        <li><a href="#catalog/category">Categories</a></li>
+                        <li><a href="#catalog/product">Products</a></li>
+                        <li><a href="#catalog/recurring">Recurring Profiles</a></li>
+                        <li><a href="#catalog/filter">Filters</a></li>
+                        <li><a class="parent">Attributes</a>
+                            <ul>
+                                <li><a href="#catalog/attribute">Attributes</a></li>
+                                <li><a href="#catalog/attribute_group">Attribute Groups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#catalog/option">Options</a></li>
+                        <li><a href="#catalog/manufacturer">Manufacturers</a></li>
+                        <li><a href="#catalog/download">Downloads</a></li>
+                        <li><a href="#catalog/review">Reviews</a></li>
+                        <li><a href="#catalog/information">Information</a></li>
+                    </ul>
+                </li>
+                <li id="extension"><a class="parent"><i class="fa fa-puzzle-piece fa-fw"></i> <span>Extensions</span></a>
+                    <ul>
+                        <li><a href="#extension/installer">Extension Installer</a></li>
+                        <li><a href="#extension/modification">Modifications</a></li>
+                        <li><a href="#extension/module">Modules</a></li>
+                        <li><a href="#extension/shipping">Shipping</a></li>
+                        <li><a href="#extension/payment">Payments</a></li>
+                        <li><a href="#extension/total">Order Totals</a></li>
+                        <li><a href="#extension/feed">Feeds</a></li>
+                    </ul>
+                </li>
+                <li id="sale"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i> <span>Sales</span></a>
+                    <ul>
+                        <li><a href="#sale/order">Orders</a></li>
+                        <li><a href="#sale/recurring">Recurring Orders</a></li>
+                        <li><a href="#sale/return">Returns</a></li>
+                        <li><a class="parent">Customers</a>
+                            <ul>
+                                <li><a href="#sale/customer">Customers</a></li>
+                                <li><a href="#sale/customer_group">Customer Groups</a></li>
+                                <li><a href="#sale/custom_field">Custom Fields</a></li>
+                                <li><a href="#sale/customer_ban_ip">Banned IP</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Gift Vouchers</a>
+                            <ul>
+                                <li><a href="#sale/voucher">Gift Vouchers</a></li>
+                                <li><a href="#sale/voucher_theme">Voucher Themes</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">PayPal</a>
+                            <ul>
+                                <li><a href="#payment/pp_express/search">Search</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="parent"><i class="fa fa-share-alt fa-fw"></i> <span>Marketing</span></a>
+                    <ul>
+                        <li><a href="#marketing/marketing">Marketing</a></li>
+                        <li><a href="#marketing/affiliate">Affiliates</a></li>
+                        <li><a href="#marketing/coupon">Coupons</a></li>
+                        <li><a href="#marketing/contact">Mail</a></li>
+                    </ul>
+                </li>
+                <li id="system"><a class="parent"><i class="fa fa-cog fa-fw"></i> <span>System</span></a>
+                    <ul>
+                        <li><a href="#setting/store">Settings</a></li>
+                        <li><a class="parent">Design</a>
+                            <ul>
+                                <li><a href="#design/layout">Layouts</a></li>
+                                <li><a href="#design/banner">Banners</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Users</a>
+                            <ul>
+                                <li><a href="#user/user">Users</a></li>
+                                <li><a href="#user/user_permission">User Groups</a></li>
+                                <li><a href="#user/api">API</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Localisation</a>
+                            <ul>
+                                <li><a href="#localisation/location">Store Location</a></li>
+                                <li><a href="#localisation/language">Languages</a></li>
+                                <li><a href="#localisation/currency">Currencies</a></li>
+                                <li><a href="#localisation/stock_status">Stock Statuses</a></li>
+                                <li><a href="#localisation/order_status">Order Statuses</a></li>
+                                <li><a class="parent">Returns</a>
+                                    <ul>
+                                        <li><a href="#localisation/return_status">Return Statuses</a></li>
+                                        <li><a href="#localisation/return_action">Return Actions</a></li>
+                                        <li><a href="#localisation/return_reason">Return Reasons</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#localisation/country">Countries</a></li>
+                                <li><a href="#localisation/zone">Zones</a></li>
+                                <li><a href="#localisation/geo_zone">Geo Zones</a></li>
+                                <li><a class="parent">Taxes</a>
+                                    <ul>
+                                        <li><a href="#localisation/tax_class">Tax Classes</a></li>
+                                        <li><a href="#localisation/tax_rate">Tax Rates</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#localisation/length_class">Length Classes</a></li>
+                                <li><a href="#localisation/weight_class">Weight Classes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="tools"><a class="parent"><i class="fa fa-wrench fa-fw"></i> <span>Tools</span></a>
+                    <ul>
+                        <li><a href="#tool/upload">Uploads</a></li>
+                        <li><a href="#tool/backup">Backup / Restore</a></li>
+                        <li><a href="#tool/error_log">Error Logs</a></li>
+                    </ul>
+                </li>
+                <li id="reports"><a class="parent"><i class="fa fa-bar-chart-o fa-fw"></i> <span>Reports</span></a>
+                    <ul>
+                        <li><a class="parent">Sales</a>
+                            <ul>
+                                <li><a href="#report/sale_order">Orders</a></li>
+                                <li><a href="#report/sale_tax">Tax</a></li>
+                                <li><a href="#report/sale_shipping">Shipping</a></li>
+                                <li><a href="#report/sale_return">Returns</a></li>
+                                <li><a href="#report/sale_coupon">Coupons</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Products</a>
+                            <ul>
+                                <li><a href="#report/product_viewed">Viewed</a></li>
+                                <li><a href="#report/product_purchased">Purchased</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Customers</a>
+                            <ul>
+                                <li><a href="#report/customer_online">Customers Online</a></li>
+                                <li><a href="#report/customer_activity">Customer Activity</a></li>
+                                <li><a href="#report/customer_order">Orders</a></li>
+                                <li><a href="#report/customer_reward">Reward Points</a></li>
+                                <li><a href="#report/customer_credit">Credit</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="parent">Marketing</a>
+                            <ul>
+                                <li><a href="#report/marketing">Marketing</a></li>
+                                <li><a href="#report/affiliate">Affiliates</a></li>
+                                <li><a href="#report/affiliate_activity">Affiliate Activity</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="stats">
+                <ul>
+                    <li>
+                        <div>Orders Completed <span class="pull-right">0%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"> <span class="sr-only">0%</span> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Orders Processing <span class="pull-right">0%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"> <span class="sr-only">0%</span> </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>Other Statuses <span class="pull-right">100%</span></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"> <span class="sr-only">100%</span> </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content"></div>
+        <footer id="footer"><a href="http://www.opencart.com">OpenCart for NodeJS</a> &copy; 2015-2016 All Rights Reserved.
+            <br/>
+        </footer>
+    </div>
+</body>
+<script src="assets/js/require.js" data-main="scripts/main"></script>
+</html>

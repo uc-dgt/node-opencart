@@ -9,6 +9,7 @@ define(['./views/list','./views/form'],function(ListView,FormView){
 		routes: {
 			'catalog/category': 'listView',
 			'catalog/category/add': 'formView',
+			'catalog/category/edit/:id': 'formView',
 		},
 
 		listView: function(){
@@ -18,7 +19,7 @@ define(['./views/list','./views/form'],function(ListView,FormView){
 			}
 			//this.context.trigger('set:brand','帮助中心');
 			var listView = new ListView({
-				router: this.context,
+				context: this.context,
 				el: '#content',
 			});
 			this.context.trigger('changeView',listView);
@@ -32,7 +33,7 @@ define(['./views/list','./views/form'],function(ListView,FormView){
 			}
 			//this.context.trigger('set:brand','帮助中心');
 			var formView = new FormView({
-				router: this.context,
+				context: this.context,
 				el: '#content',
 				id: id,
 			});

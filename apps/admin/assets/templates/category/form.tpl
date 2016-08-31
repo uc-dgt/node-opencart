@@ -17,7 +17,7 @@
                 <h3 class="panel-title"><i class="fa fa-pencil"></i> Edit Category</h3>
             </div>
             <div class="panel-body">
-                <form action="#catalog/category/edit/<%= model._id %>" method="post" enctype="multipart/form-data" id="form-category" class="form-horizontal">
+                <form action="#catalog/category/edit/33" method="post" enctype="multipart/form-data" id="form-category" class="form-horizontal">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
                         <li><a href="#tab-data" data-toggle="tab">Data</a></li>
@@ -35,7 +35,7 @@
                                     <div class="form-group required">
                                         <label class="col-sm-2 control-label" for="input-name1">Category Name</label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="category_description[1][name]" value="<%= model.name %>" placeholder="Category Name" id="input-name1" class="form-control">
+                                            <input type="text" name="category_description[1][name]" value="Camera" placeholder="Category Name" id="input-name1" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group">
